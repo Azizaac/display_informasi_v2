@@ -46,13 +46,13 @@
 <div align="center">
 
 ### Display Utama
-![Display Utama](https://via.placeholder.com/800x450/193F7A/ffffff?text=Display+Utama)
+![Display Utama](.github/screenshots/display-utama.png)
 
 ### Admin Panel
-![Admin Panel](https://via.placeholder.com/800x450/4e73df/ffffff?text=Admin+Panel)
+![Admin Panel](.github/screenshots/admin-panel.png)
 
 ### Manajemen Video
-![Video Management](https://via.placeholder.com/800x450/1cc88a/ffffff?text=Video+Management)
+![Video Management](.github/screenshots/video-management.png)
 
 </div>
 
