@@ -1,6 +1,6 @@
 <div align="center">
 
-![Display Informasi Banner](https://raw.githubusercontent.com/yourusername/display-informasi-v2/main/.github/banner.png)
+![Display Informasi Banner](.github/banner.svg)
 
 # 📺 Display Informasi - Solo Technopark
 
