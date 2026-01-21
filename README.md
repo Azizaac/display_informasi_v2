@@ -75,7 +75,7 @@ Pastikan sistem Anda sudah terinstall:
 #### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/display-informasi-v2.git
+git clone https://github.com/Azizaac/display_informasi_v2.git
 cd display-informasi-v2
 ```
 
