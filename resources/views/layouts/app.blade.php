@@ -186,14 +186,14 @@
                                 <i class="fas fa-user-circle fa-lg"></i> Administrator
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Profile</a>
-                                <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Settings</a>
+                                <a class="dropdown-item" href="{{ route('admin.profile.edit') }}">Profile</a>
+                                <a class="dropdown-item" href="{{ route('admin.settings.index') }}">Settings</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="#"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
-                                <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </div>

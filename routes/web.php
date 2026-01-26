@@ -31,8 +31,13 @@ Route::prefix('api')->group(function () {
     Route::get('/background', [DisplayController::class, 'getBackgroundApi']);
 });
 
-// Admin Panel
-Route::prefix('admin')->name('admin.')->group(function () {
+// Auth Routes
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'login'])->name('login.post');
+Route::post('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+
+// Admin Panel (Protected)
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
     Route::resource('informasi', InformasiController::class);
     Route::resource('jadwal', JadwalController::class);
@@ -40,11 +45,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('video', VideoController::class);
     Route::resource('background', BackgroundImageController::class);
 
-    // Auth (Simplified for now)
-    Route::post('/logout', function () {
-        auth()->logout();
-        return redirect('/');
-    })->name('logout');
+    // Profile Routes
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+
+    // Settings Routes
+    Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])->name('settings.index');
+    Route::put('/settings', [App\Http\Controllers\SettingController::class, 'update'])->name('settings.update');
 });
 
 // Keep this for backward compatibility

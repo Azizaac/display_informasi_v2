@@ -500,9 +500,9 @@
             </div>
 
             <div class="title-section">
-                <h1><i class="fas fa-tv"></i> DISPLAY INFORMASI - SOLO TECHNOPARK</h1>
+                <h1><i class="fas fa-tv"></i> {{ $settings['header_title']->value ?? 'DISPLAY INFORMASI - SOLO TECHNOPARK' }}</h1>
                 <div class="address">
-                    Jl. Slamet Riyadi No. 582, Surakarta, Jawa Tengah 57143
+                    {!! nl2br(e($settings['header_subtitle']->value ?? 'Jl. Slamet Riyadi No. 582, Surakarta, Jawa Tengah 57143')) !!}
                 </div>
             </div>
 

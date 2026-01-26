@@ -33,7 +33,10 @@ class DisplayController extends Controller
         $background = BackgroundImage::where('is_active', true)
             ->first();
 
-        return view('display.index', compact('jadwals', 'carousels', 'video', 'background'));
+        // Fetch settings
+        $settings = \App\Models\Setting::all()->keyBy('key');
+
+        return view('display.index', compact('jadwals', 'carousels', 'video', 'background', 'settings'));
     }
 
     /**
