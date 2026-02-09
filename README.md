@@ -47,15 +47,28 @@
 <div align="center">
 
 ### Display Utama
-*Tampilan layar informasi dengan jadwal, video YouTube, dan carousel gambar*
+![Display Utama](.github/screenshots/display-utama.png)
+*Tampilan layar informasi dengan jadwal auto-scroll, video YouTube, dan carousel gambar*
 
-### Admin Panel
-*Dashboard admin untuk mengelola semua konten*
+### Admin Panel - Dashboard
+![Admin Dashboard](.github/screenshots/admin-dashboard.png)
+*Dashboard admin dengan statistik dan quick access ke semua modul*
 
-### Manajemen Konten
-*Interface CRUD yang mudah digunakan untuk semua modul*
+### Admin Panel - Manajemen Jadwal
+![Jadwal Management](.github/screenshots/jadwal-management.png)
+*Interface CRUD untuk mengelola jadwal kegiatan*
+
+### Admin Panel - Manajemen Video
+![Video Management](.github/screenshots/video-management.png)
+*Interface untuk mengelola video YouTube dengan preview*
+
+### Admin Panel - Manajemen Carousel
+![Carousel Management](.github/screenshots/carousel-management.png)
+*Interface untuk mengelola slideshow gambar*
 
 </div>
+
+> 📝 **Note**: Screenshot akan ditambahkan setelah deployment. Untuk melihat tampilan langsung, jalankan aplikasi dan akses `http://localhost:8000`
 
 ---
 
