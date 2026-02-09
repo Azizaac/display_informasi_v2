@@ -569,10 +569,34 @@
                         <iframe
                             src="{{ $embedUrl }}"
                             frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            sandbox="allow-scripts allow-same-origin allow-presentation"
                             style="width: 100%; height: 100%; border-radius: 12px;">
                         </iframe>
+                        <script>
+                            // Fallback jika video tidak bisa di-embed
+                            (function() {
+                                const iframe = document.currentScript.previousElementSibling;
+                                let retryCount = 0;
+                                const maxRetries = 2;
+
+                                function checkAndRetry() {
+                                    retryCount++;
+                                    if (retryCount >= maxRetries) return;
+
+                                    // Try alternative domains
+                                    const currentSrc = iframe.src;
+                                    if (currentSrc.includes('youtube.com')) {
+                                        iframe.src = currentSrc.replace('youtube.com', 'youtube-nocookie.com');
+                                    }
+                                }
+
+                                iframe.addEventListener('error', checkAndRetry);
+                                setTimeout(checkAndRetry, 3000); // Retry after 3 seconds if needed
+                            })();
+                        </script>
                         @else
                         <video width="100%" height="100%" controls autoplay>
                             <source src="{{ $videoUrl }}" type="video/mp4">
