@@ -176,15 +176,15 @@
 
     <div class="login-card">
         <div class="login-header">
-            <h1>Welcome Back</h1>
-            <p>Sign in to access the dashboard</p>
+            <h1>Selamat Datang</h1>
+            <p>Masuk ke panel admin</p>
         </div>
 
         <form method="POST" action="{{ route('login.post') }}">
             @csrf
 
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">Alamat Email</label>
                 <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="admin@example.com" required autofocus>
                 @error('email')
                 <div class="error-message">
@@ -199,7 +199,7 @@
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Kata Sandi</label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
                 @error('password')
                 <div class="error-message">
@@ -214,7 +214,7 @@
             </div>
 
             <button type="submit" class="btn-primary">
-                Sign In
+                Masuk
             </button>
         </form>
     </div>

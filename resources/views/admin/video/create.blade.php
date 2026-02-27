@@ -14,17 +14,17 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="video_file" class="form-label">Upload Video (Opsional if URL is filled)</label>
+                        <label for="video_file" class="form-label">Upload Video (Opsional jika URL diisi)</label>
                         <input type="file" class="form-control @error('video_file') is-invalid @enderror"
                             id="video_file" name="video_file" accept="video/mp4,video/x-m4v,video/*">
-                        <small class="form-text text-muted">Format: MP4, AVI, MOV, WMV, FLV, MKV. Max: 100 MB</small>
+                        <small class="form-text text-muted">Format: MP4, AVI, MOV, WMV, FLV, MKV. Maks: 100 MB</small>
                         @error('video_file')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <div class="mb-3">
-                        <label for="video_url" class="form-label">atau URL Video (Opsional if file uploaded)</label>
+                        <label for="video_url" class="form-label">atau URL Video (Opsional jika file diupload)</label>
                         <input type="text" class="form-control @error('video_url') is-invalid @enderror"
                             id="video_url" name="video_url" placeholder="https://youtube.com/watch?v=..." value="{{ old('video_url') }}">
                         <small class="form-text text-muted">Masukkan URL lengkap video (YouTube, Vimeo, dll)</small>
@@ -55,7 +55,7 @@
                         <label for="thumbnail_file" class="form-label">Upload Thumbnail (Opsional)</label>
                         <input type="file" class="form-control @error('thumbnail_file') is-invalid @enderror"
                             id="thumbnail_file" name="thumbnail_file" accept="image/*">
-                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Max: 5 MB</small>
+                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Maks: 5 MB</small>
                         @error('thumbnail_file')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

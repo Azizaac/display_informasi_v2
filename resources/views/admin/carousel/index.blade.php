@@ -17,9 +17,9 @@
                         <thead class="table-light">
                             <tr>
                                 <th width="5%">No</th>
-                                <th width="30%">Preview</th>
-                                <th>Caption</th>
-                                <th width="10%">Order</th>
+                                <th width="30%">Pratinjau</th>
+                                <th>Keterangan</th>
+                                <th width="10%">Urutan</th>
                                 <th width="10%">Status</th>
                                 <th width="20%">Aksi</th>
                             </tr>
@@ -47,7 +47,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.carousel.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Edit</a>
+                                    <a href="{{ route('admin.carousel.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Ubah</a>
                                     <form action="{{ route('admin.carousel.destroy', $item->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')

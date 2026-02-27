@@ -61,7 +61,7 @@
                                         <i class="fas fa-eye"></i> Lihat
                                     </a>
                                     <a href="{{ route('admin.informasi.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">
-                                        <i class="fas fa-edit"></i> Edit
+                                        <i class="fas fa-edit"></i> Ubah
                                     </a>
                                     <form action="{{ route('admin.informasi.destroy', $item->id) }}" method="POST" style="display:inline;">
                                         @csrf

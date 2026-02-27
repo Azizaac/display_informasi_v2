@@ -17,7 +17,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th width="5%">No</th>
-                                <th width="15%">Preview</th>
+                                <th width="15%">Pratinjau</th>
                                 <th>Judul</th>
                                 <th>Deskripsi</th>
                                 <th width="10%">Status</th>
@@ -67,7 +67,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.video.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Edit</a>
+                                    <a href="{{ route('admin.video.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Ubah</a>
                                     <form action="{{ route('admin.video.destroy', $item->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')

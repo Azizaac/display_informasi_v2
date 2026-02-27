@@ -11,15 +11,19 @@ class Jadwal extends Model
 
     protected $table = 'jadwals';
     protected $casts = [
-        'tanggal' => 'date',
+        'waktu_mulai' => 'datetime',
+        'waktu_selesai' => 'datetime',
     ];
 
     protected $fillable = [
-        'tanggal',
         'waktu_mulai',
         'waktu_selesai',
         'agenda',
         'lokasi',
-        'pic'
+        'pic',
+        'instansi',
+        'status',
+        'jumlah_peserta',
+        'no_surat',
     ];
 }

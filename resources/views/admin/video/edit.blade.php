@@ -18,7 +18,7 @@
                         <label for="video_file" class="form-label">Upload Video Baru</label>
                         <input type="file" class="form-control @error('video_file') is-invalid @enderror"
                             id="video_file" name="video_file" accept="video/mp4,video/x-m4v,video/*">
-                        <small class="form-text text-muted">Format: MP4, AVI, MOV, WMV, FLV, MKV. Max: 100 MB</small>
+                        <small class="form-text text-muted">Format: MP4, AVI, MOV, WMV, FLV, MKV. Maks: 100 MB</small>
                         @if($video->video_url)
                         <div class="mt-2">
                             @if(filter_var($video->video_url, FILTER_VALIDATE_URL))
@@ -65,11 +65,11 @@
                         <label for="thumbnail_file" class="form-label">Upload Thumbnail Baru</label>
                         <input type="file" class="form-control @error('thumbnail_file') is-invalid @enderror"
                             id="thumbnail_file" name="thumbnail_file" accept="image/*">
-                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Max: 5 MB</small>
+                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Maks: 5 MB</small>
                         @if($video->thumbnail_url)
                         <div class="mt-2">
                             @if(filter_var($video->thumbnail_url, FILTER_VALIDATE_URL))
-                            <img src="{{ $video->thumbnail_url }}" alt="Current Thumbnail" style="max-height: 100px; border-radius: 5px;">
+                            <img src="{{ asset('storage/' . $video->thumbnail_url) }}" alt="Thumbnail Saat Ini" style="max-height: 100px; border-radius: 5px;">
                             @else
                             <img src="{{ asset('storage/' . $video->thumbnail_url) }}" alt="Current Thumbnail" style="max-height: 100px; border-radius: 5px;">
                             @endif

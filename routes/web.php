@@ -41,6 +41,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
     Route::resource('informasi', InformasiController::class);
     Route::resource('jadwal', JadwalController::class);
+    Route::post('jadwal/sync', [JadwalController::class, 'syncFromSpreadsheet'])->name('jadwal.sync');
+
+
     Route::resource('carousel', CarouselController::class);
     Route::resource('video', VideoController::class);
     Route::resource('background', BackgroundImageController::class);

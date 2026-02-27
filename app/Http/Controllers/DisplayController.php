@@ -7,6 +7,7 @@ use App\Models\Carousel;
 use App\Models\Video;
 use App\Models\BackgroundImage;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class DisplayController extends Controller
 {
@@ -15,8 +16,9 @@ class DisplayController extends Controller
      */
     public function index()
     {
-        // Fetch active jadwal sorted by date and time
-        $jadwals = Jadwal::orderBy('tanggal', 'asc')
+        // Fetch jadwal hari ini saja, diurutkan berdasarkan waktu mulai
+        $today = Carbon::today();
+        $jadwals = Jadwal::whereDate('waktu_mulai', $today)
             ->orderBy('waktu_mulai', 'asc')
             ->get();
 
@@ -44,7 +46,9 @@ class DisplayController extends Controller
      */
     public function getJadwalApi()
     {
-        $jadwals = Jadwal::orderBy('tanggal', 'asc')
+        // API juga filter hari ini saja
+        $today = Carbon::today();
+        $jadwals = Jadwal::whereDate('waktu_mulai', $today)
             ->orderBy('waktu_mulai', 'asc')
             ->get();
 

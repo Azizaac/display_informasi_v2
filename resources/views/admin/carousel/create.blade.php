@@ -17,7 +17,7 @@
                         <label for="image_file" class="form-label">Upload Gambar <span class="text-danger">*</span> (Opsional jika ada URL)</label>
                         <input type="file" class="form-control @error('image_file') is-invalid @enderror"
                             id="image_file" name="image_file" accept="image/*">
-                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Max: 5 MB</small>
+                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Maks: 5 MB</small>
                         <div id="imagePreview" style="margin-top: 10px;"></div>
                         @error('image_file')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="caption" class="form-label">Caption</label>
+                        <label for="caption" class="form-label">Keterangan</label>
                         <input type="text" class="form-control @error('caption') is-invalid @enderror"
                             id="caption" name="caption" value="{{ old('caption') }}">
                         @error('caption')

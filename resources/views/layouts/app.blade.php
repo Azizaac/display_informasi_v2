@@ -143,15 +143,15 @@
                 </a>
 
                 <div class="sidebar-heading text-uppercase font-weight-bold" style="font-size: 0.75rem; padding: 1rem 1.5rem 0.5rem; opacity: 0.7;">
-                    Management
+                    Manajemen
                 </div>
 
                 <a href="{{ route('admin.jadwal.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('*.jadwal.*') ? 'active' : '' }}">
                     <i class="fas fa-calendar-alt"></i> Jadwal
                 </a>
-                <a href="{{ route('admin.informasi.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('*.informasi.*') ? 'active' : '' }}">
+                <!-- <a href="{{ route('admin.informasi.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('*.informasi.*') ? 'active' : '' }}">
                     <i class="fas fa-newspaper"></i> Informasi
-                </a>
+                </a>  -->
                 <a href="{{ route('admin.carousel.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('*.carousel.*') ? 'active' : '' }}">
                     <i class="fas fa-images"></i> Galeri / Carousel
                 </a>
@@ -186,12 +186,12 @@
                                 <i class="fas fa-user-circle fa-lg"></i> Administrator
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('admin.profile.edit') }}">Profile</a>
-                                <a class="dropdown-item" href="{{ route('admin.settings.index') }}">Settings</a>
+                                <a class="dropdown-item" href="{{ route('admin.profile.edit') }}">Profil</a>
+                                <a class="dropdown-item" href="{{ route('admin.settings.index') }}">Pengaturan</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="#"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    Logout
+                                    Keluar
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf

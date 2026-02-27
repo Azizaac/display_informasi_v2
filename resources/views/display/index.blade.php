@@ -181,7 +181,7 @@
 
         .schedule-header {
             display: grid;
-            grid-template-columns: 140px 140px 1fr 140px;
+            grid-template-columns: 1.6fr 2.5fr 1.5fr 1.5fr 1fr;
             gap: 10px;
             padding: 10px 12px;
             background: rgba(25, 63, 122, 0.98);
@@ -218,9 +218,9 @@
 
         .schedule-row {
             display: grid;
-            grid-template-columns: 140px 140px 1fr 140px;
+            grid-template-columns: 1.6fr 2.5fr 1.5fr 1.5fr 1fr;
             gap: 10px;
-            padding: 12px 16px;
+            padding: 10px 14px;
             background: rgba(0, 0, 0, 0.50);
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
@@ -245,8 +245,37 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             border-right: none;
             letter-spacing: 0.3px;
+        }
+
+        /* Left-align text-heavy columns */
+        .schedule-row .col-agenda,
+        .schedule-row .col-lokasi,
+        .schedule-row .col-instansi {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        /* Date-time combined cell */
+        .col-datetime {
+            flex-direction: column;
+            gap: 4px;
+            line-height: 1.3;
+        }
+
+        .col-datetime .dt-date {
+            font-size: 14px;
+            font-weight: 700;
+            opacity: 0.95;
+        }
+
+        .col-datetime .dt-time {
+            font-size: 13px;
+            font-weight: 600;
+            color: #D9A91A;
+            text-shadow: 0 1px 4px rgba(217, 169, 26, 0.4);
         }
 
         /* ============= MEDIA SECTION ============= */
@@ -431,7 +460,7 @@
 
             .schedule-header,
             .schedule-row {
-                grid-template-columns: 150px 150px 1fr 150px;
+                grid-template-columns: 1.6fr 2.5fr 1.5fr 1.5fr 1fr;
             }
         }
 
@@ -446,13 +475,13 @@
 
             .schedule-header,
             .schedule-row {
-                grid-template-columns: 1fr 1fr 2fr 1fr;
-                font-size: 14px;
+                grid-template-columns: 1.6fr 2.5fr 1.5fr 1.5fr 1fr;
+                font-size: 13px;
             }
 
             .schedule-header>div,
             .schedule-row>div {
-                padding: 15px;
+                padding: 10px 8px;
             }
         }
 
@@ -517,19 +546,24 @@
             <div class="table-section">
                 <div class="table-wrapper">
                     <div class="schedule-header">
-                        <div>Tanggal</div>
-                        <div>Waktu</div>
+                        <div>Tanggal & Waktu</div>
                         <div>Agenda</div>
                         <div>Lokasi</div>
+                        <div>Instansi</div>
+                        <div>PIC</div>
                     </div>
                     <div class="schedule-track" id="scheduleTrack">
                         @if($jadwals->count() > 0)
                         @foreach($jadwals as $jadwal)
                         <div class="schedule-row">
-                            <div>{{ \Carbon\Carbon::parse($jadwal->tanggal)->format('d/m/Y') }}</div>
-                            <div>{{ substr($jadwal->waktu_mulai, 0, 5) }} - {{ substr($jadwal->waktu_selesai, 0, 5) }}</div>
-                            <div>{{ $jadwal->agenda }}</div>
-                            <div>{{ $jadwal->lokasi }}</div>
+                            <div class="col-datetime">
+                                <span class="dt-date">{{ $jadwal->waktu_mulai->format('d/m/Y') }}</span>
+                                <span class="dt-time">{{ $jadwal->waktu_mulai->format('H:i') }} - {{ $jadwal->waktu_selesai->format('H:i') === '23:59' ? 'Selesai' : $jadwal->waktu_selesai->format('H:i') }}</span>
+                            </div>
+                            <div class="col-agenda">{{ $jadwal->agenda }}</div>
+                            <div class="col-lokasi">{{ $jadwal->lokasi }}</div>
+                            <div class="col-instansi">{{ $jadwal->instansi ?? '-' }}</div>
+                            <div>{{ $jadwal->pic ?? '-' }}</div>
                         </div>
                         @endforeach
                         @else

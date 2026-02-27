@@ -17,8 +17,8 @@
                         <thead class="table-light">
                             <tr>
                                 <th width="5%">No</th>
-                                <th width="30%">Preview</th>
-                                <th>Position</th>
+                                <th width="30%">Pratinjau</th>
+                                <th>Posisi</th>
                                 <th width="10%">Status</th>
                                 <th width="20%">Aksi</th>
                             </tr>
@@ -45,7 +45,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.background.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Edit</a>
+                                    <a href="{{ route('admin.background.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Ubah</a>
                                     <form action="{{ route('admin.background.destroy', $item->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')

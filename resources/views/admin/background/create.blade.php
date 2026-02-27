@@ -14,17 +14,17 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="image_file" class="form-label">Upload Gambar (Opsional if URL filled)</label>
+                        <label for="image_file" class="form-label">Upload Gambar (Opsional jika URL diisi)</label>
                         <input type="file" class="form-control @error('image_file') is-invalid @enderror"
                             id="image_file" name="image_file" accept="image/*">
-                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Max: 5 MB</small>
+                        <small class="form-text text-muted">Format: JPG, PNG, GIF, WebP. Maks: 5 MB</small>
                         @error('image_file')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <div class="mb-3">
-                        <label for="image_url" class="form-label">atau URL Gambar (Opsional if file uploaded)</label>
+                        <label for="image_url" class="form-label">atau URL Gambar (Opsional jika file diupload)</label>
                         <input type="text" class="form-control @error('image_url') is-invalid @enderror"
                             id="image_url" name="image_url" placeholder="https://example.com/background.jpg" value="{{ old('image_url') }}">
                         <small class="form-text text-muted">Masukkan URL lengkap gambar background</small>
@@ -36,11 +36,11 @@
                     <div class="mb-3">
                         <label for="position" class="form-label">Posisi</label>
                         <select class="form-control @error('position') is-invalid @enderror" id="position" name="position">
-                            <option value="center" {{ old('position', 'center') == 'center' ? 'selected' : '' }}>Center</option>
-                            <option value="top" {{ old('position') == 'top' ? 'selected' : '' }}>Top</option>
-                            <option value="bottom" {{ old('position') == 'bottom' ? 'selected' : '' }}>Bottom</option>
-                            <option value="left" {{ old('position') == 'left' ? 'selected' : '' }}>Left</option>
-                            <option value="right" {{ old('position') == 'right' ? 'selected' : '' }}>Right</option>
+                            <option value="center" {{ old('position', 'center') == 'center' ? 'selected' : '' }}>Tengah</option>
+                            <option value="top" {{ old('position') == 'top' ? 'selected' : '' }}>Atas</option>
+                            <option value="bottom" {{ old('position') == 'bottom' ? 'selected' : '' }}>Bawah</option>
+                            <option value="left" {{ old('position') == 'left' ? 'selected' : '' }}>Kiri</option>
+                            <option value="right" {{ old('position') == 'right' ? 'selected' : '' }}>Kanan</option>
                         </select>
                         @error('position')
                         <div class="invalid-feedback">{{ $message }}</div>

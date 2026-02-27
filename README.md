@@ -20,13 +20,14 @@
 
 ### ✨ Features
 
-- 🗓️ **Manajemen Jadwal** - Kelola jadwal kegiatan dengan tanggal, waktu, agenda, dan lokasi
+- 🗓️ **Manajemen Jadwal** - Kelola jadwal kegiatan secara manual atau via sinkronisasi otomatis
+- 🔄 **Sinkronisasi Otomatis** - Import jadwal langsung dari Google Spreadsheet dengan filter status "Completed"
 - 🎥 **Video Display** - Tampilkan video YouTube dengan autoplay, mute, dan loop otomatis
 - 🖼️ **Image Carousel** - Slideshow gambar dengan caption dan urutan custom
 - 📰 **Informasi/Pengumuman** - Kelola informasi dengan gambar dan video pendukung
 - 🎨 **Background Custom** - Atur background display dengan posisi yang dapat disesuaikan
 - ⚙️ **Settings Dinamis** - Ubah header title dan subtitle tanpa edit kode
-- 📱 **Responsive Design** - Tampilan optimal di berbagai ukuran layar
+- 📱 **Responsive Design** - Tampilan proporsional cerdas di berbagai ukuran layar
 - 🔄 **Auto-scroll** - Jadwal scroll otomatis dengan infinite loop
 - ⚡ **Real-time Updates** - Jam dan tanggal update secara real-time
 - 🔐 **Admin Authentication** - Sistem login untuk keamanan admin panel
@@ -262,11 +263,14 @@ exit
 
 ### 2. Manajemen Jadwal
 **Fitur:**
-- Tambah jadwal dengan tanggal, waktu mulai, waktu selesai, agenda, lokasi, dan PIC
+- **Sinkronisasi Otomatis**: Tarik data jadwal langsung dari Google Spreadsheet (.csv)
+- Filter otomatis: hanya mengimpor baris data dengan status "Completed"
+- Tambah jadwal manual dengan field lengkap: waktu awal/akhir, agenda, instansi, lokasi, PIC, jumlah peserta, no surat, dan status
 - Edit dan hapus jadwal
-- View daftar jadwal terurut
+- Penyesuaian cerdas untuk waktu "Selesai" (23:59)
 
 **Tampilan Display:**
+- Layout 5-kolom dinamis: Tanggal & Waktu (digabung), Agenda, Lokasi, Instansi, dan PIC
 - Auto-scroll infinite loop
 - Pause saat hover
 - Responsive table design
