@@ -2,7 +2,7 @@
 
 # 📺 Display Informasi - Solo Technopark
 
-**Sistem Informasi Digital Display untuk Solo Technopark**
+**Sistem Informasi Digital Display Modern untuk Solo Technopark**
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
@@ -20,17 +20,16 @@
 
 ### ✨ Features
 
-- 🗓️ **Manajemen Jadwal** - Kelola jadwal kegiatan secara manual atau via sinkronisasi otomatis
-- 🔄 **Sinkronisasi Otomatis** - Import jadwal langsung dari Google Spreadsheet dengan filter status "Completed"
-- 🎥 **Video Display** - Tampilkan video YouTube dengan autoplay, mute, dan loop otomatis
-- 🖼️ **Image Carousel** - Slideshow gambar dengan caption dan urutan custom
-- 📰 **Informasi/Pengumuman** - Kelola informasi dengan gambar dan video pendukung
-- 🎨 **Background Custom** - Atur background display dengan posisi yang dapat disesuaikan
-- ⚙️ **Settings Dinamis** - Ubah header title dan subtitle tanpa edit kode
-- 📱 **Responsive Design** - Tampilan proporsional cerdas di berbagai ukuran layar
-- 🔄 **Auto-scroll** - Jadwal scroll otomatis dengan infinite loop
-- ⚡ **Real-time Updates** - Jam dan tanggal update secara real-time
-- 🔐 **Admin Authentication** - Sistem login untuk keamanan admin panel
+- 🗓️ **Manajemen Jadwal** - Kelola jadwal kegiatan dengan mudah, lengkap dengan waktu, lokasi, dan penanggung jawab.
+- 🔄 **Sinkronisasi Otomatis** - Integrasi cerdas untuk impor data jadwal langsung dari Google Spreadsheet (.csv).
+- 🎥 **Video Display** - Pemutar video YouTube terintegrasi dengan fitur autoplay, mute, dan looping untuk konten promosi.
+- 🖼️ **Image Carousel** - Slideshow gambar dinamis untuk menampilkan poster, pengumuman, atau dokumentasi kegiatan.
+- 📰 **Informasi & Berita** - Modul tambahan untuk mengelola konten pengumuman berbasis teks dan gambar.
+- 🎨 **Background Dinamis** - Kustomisasi latar belakang layar display sesuai dengan tema atau kebutuhan visual.
+- ⚙️ **Pengaturan Instan** - Ubah teks header, subtitle, dan konfigurasi lainnya langsung melalui Admin Panel tanpa menyentuh kode.
+- 📱 **Desain Adaptif** - Layout yang responsif dan proporsional untuk berbagai jenis layar monitor dan smart TV.
+- ⚡ **Update Real-time** - Sinkronisasi waktu dan refresh konten secara otomatis untuk informasi yang selalu aktual.
+- 🔐 **Keamanan Terjamin** - Autentikasi Admin Panel yang aman untuk melindungi integritas data informasi.
 
 ### 🛠️ Tech Stack
 
@@ -52,11 +51,11 @@
 *Tampilan layar informasi dengan jadwal auto-scroll, video YouTube, dan carousel gambar*
 
 ### Admin Panel - Dashboard
-![Admin Dashboard](.github/screenshots/admin-dashboard.png)
-*Dashboard admin dengan statistik dan quick access ke semua modul*
+![Admin Dashboard](.github/screenshots/admin-panel.png)
+*Dashboard admin dengan statistik dan akses cepat ke semua modul*
 
 ### Admin Panel - Manajemen Jadwal
-![Jadwal Management](.github/screenshots/jadwal-management.png)
+*(Screenshot menyusul)*
 *Interface CRUD untuk mengelola jadwal kegiatan*
 
 ### Admin Panel - Manajemen Video
@@ -64,7 +63,7 @@
 *Interface untuk mengelola video YouTube dengan preview*
 
 ### Admin Panel - Manajemen Carousel
-![Carousel Management](.github/screenshots/carousel-management.png)
+*(Screenshot menyusul)*
 *Interface untuk mengelola slideshow gambar*
 
 </div>
